@@ -31,25 +31,14 @@ public class MySqlDao implements Persistible<List<Trajeto>>{
 	public void query(List<Trajeto> aleatoryList) {
 		// TODO Auto-generated method stub
 		
-			String query =	"select * from Trajeto where longitude = rand()";
+			String query =	"select t from Trajeto t where longitude = rand()";
 			
 			em.createQuery(query);
 			query.toString();
 				
 				
 				
-				/*"select p from Trajeto p where p.longitude "
-						+ "= :longitude and p.latitude = :latitude",
-				Trajeto.class);
-		
-		for (Trajeto trajeto : aleatoryList) {
-					
-			query.setParameter("longitude", trajeto.getLongitude());
-			query.setParameter("latitude", trajeto.getLatitude());
-
-			query.getSingleResult();
 			
-		}*/
 		
 	}
 	
